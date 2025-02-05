@@ -1,0 +1,113 @@
+:root {
+    --light-yellow: hsl(48, 100%, 80%);
+    --yellow: hsl(48, 100%, 60%);
+    --dark-yellow: hsl(43, 74%, 49%);
+    --light-brown: hsl(21, 49%, 78%);
+    --brown: hsl(21, 49%, 58%);
+    --dark-brown: hsl(21, 49%, 28%);
+    --light-orange: hsl(8, 56%, 80%);
+    --orange: hsl(8, 56%, 50%);
+    --dark-orange: hsl(8, 56%, 30%);
+    --light-red: hsl(351, 58%, 71%);
+    --red: hsl(351, 58%, 41%);
+    --dark-red: hsl(351, 58%, 21%);
+    --light-green: hsl(162, 27%, 87%);
+    --light-green2: hsl(162, 27%, 67%);
+    --green: hsl(162, 27%, 37%);
+    --dark-green: hsl(162, 27%, 17%);
+    --light-grey: hsl(0, 0%, 80%);
+    --grey: hsl(0, 0%, 50%);
+    --dark-grey: hsl(0, 0%, 30%);
+    --black: hsl(0, 0%, 10%);
+    --white: hsl(0, 0%, 90%);
+    --marginTop-container: 5vh 0 0 0;
+    --marginY: 5vh 0;
+    --marginX: 0 5vw;
+    --paddingTop-container: 5vh 0 0 0;
+    --paddingY: 10vh 0;
+    --paddingX: 0 5%;
+    --borderRadius: 5px;
+    --line-height-title: 1.5;
+    --line-height-text: 3;
+    --font-size-huge: 48px;
+    --font-size-title: 36px;
+    --font-size-subtitle: 24px;
+    --font-size-text: 16px;
+    --font-weight-bold: 700;
+    --font-weight-normal: 400;
+    --font-weight-light: 300;
+}
+
+section {
+    padding: var(--paddingTop-container);
+    margin: var(--marginTop-container);
+}
+
+h2 {
+    font-size: var(--font-size-subtitle);
+    line-height: var(--line-height-title);
+}
+
+h3 {
+    font-size: var(--font-size-text);
+    line-height: var(--line-height-text);
+}
+
+li {
+    list-style-type: none;
+    line-height: var(--line-height-text);
+}
+
+hr {
+    color: var(--red);
+    transform: scaleY(5);
+}
+
+#hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/black-horses.jpg);
+    background-size: cover;
+    background-position: 50% 20%;
+    background-color: var(--dark-green);
+    background-blend-mode: overlay;
+    padding: var(--paddingY);
+    margin: var(--marginY) !important;
+    height: 80vh;
+}
+
+#hero-section h2 {
+    color: var(--light-green);
+    font-size: var(--font-size-text);
+    line-height: var(--line-height-title);
+}
+
+#hero-title {
+    color: var(--light-green);
+    font-size: var(--font-size-huge);
+    line-height: var(--line-height-title);
+}
+
+.lead {
+    color: var(--light-green);
+    font-size: var(--font-size-text);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+
+}
+
+#hero-title {
+    font-size: var(--font-size-huge);
+    line-height: var(--line-height-title);
+}
+
+.contact-btn {
+    background-color: var(--light-green);
+}
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
