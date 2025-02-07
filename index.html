@@ -21,12 +21,12 @@
 
 <body class="overflow-x-hidden">
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#hero-section">Le Cheval Noir</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse justify-content-md-end" id="navbar">
                     <ul class="navbar-nav">
@@ -57,11 +57,13 @@
         <!-- Hero Section -->
         <section id="hero-section">
             <div class="jumbotron text-center">
-                <h1 id="hero-title">Le Cheval Noir</h1>
-                <p class="lead">Restaurant de couscous à Miannay</p>
+                <div class="container">
+                    <h1 id="hero-title">Le Cheval Noir</h1>
+                    <p class="lead">Restaurant de couscous à Miannay</p>
+                </div>
                 <hr class="my-5">
                 <h2>L'authentique couscous marocain</h2>
-                <a data-mdb-ripple-init class="btn btn-lg contact-btn" href="#contact" role="button">
+                <a data-mdb-ripple-init class="btn btn-lg contact-btn" href="https://wa.me/33322242017" role="button">
                     Réserver une table
                 </a>
             </div>
@@ -69,13 +71,22 @@
         <!-- About Section -->
         <section id="about">
             <div class="container">
-                <h2>À propos de nous</h2>
-                <p>
-                    Nous vous proposons une cuisine orientale maison à base de produits frais, 
-                    une sélection de vins et un accueil chaleureux. 
-                    Venez découvrir de délicieuses saveurs orientales !
-                </p>
-            </div>
+                    <div class="col-sm-12 col-md-6">
+                        <h2>À propos de nous</h2>
+                        </div>
+                        <div class="row">
+                        <div class="img-container col-sm-12 col-md-6">
+                            <img src="images/couscous-ai.jpeg" alt="Couscous" class="img-fluid rounded">
+                        </div>
+                        <div class="col-sm-12 col-md-5 align-self-center">
+                            <p>
+                                Nous vous proposons une cuisine orientale maison à base de produits frais, 
+                                une sélection de bons vins et un accueil chaleureux. 
+                                Venez découvrir de délicieuses saveurs orientales !
+                            </p>
+                        </div>
+                    </div>
+                </div>
         </section>
             <!-- Menu Section -->
             <section id="menu">
@@ -125,37 +136,8 @@
             <!-- Petits + -->
             <section id="services">
                 <div class="container">
-                    <h2>Nos services</h2>
-                    
-                    <div><i class="fa-solid fa-wheelchair"></i>
-                        <p>Accessible en fauteuil roulant</p>
-                    </div>
-                    <div><i class="fa-solid fa-bowl-rice"></i>
-                        <p>Plats à emporter du jeudi au dimanche</p>
-                    </div>
-                    <div><i class="fa-solid fa-square-parking"></i>
-                        <p>Grand Parking</p>
-                    </div>
-                    <div><i class="fa-solid fa-champagne-glasses"></i>
-                        <p>Bar</p>
-                    </div>
-                    <div><i class="fa-solid fa-martini-glass"></i>
-                        <p>Cocktail maison</p>
-                    </div>
-                    </div>
-            </section>
-            <!-- Client Feedback -->
-             <!-- 
-            ------------------------------
-            Put in tripAdvisor 
-            reviews with widget
-            ------------------------------
-             -->
-            <!-- Opening hours -->
-            <section id="opening-hours">
-                <div class="container">
                     <div class="row">
-                        <div class="container col-sm-12 d-flex flex-column justify-content-center">
+                        <div class="col-sm-12 col-md-5">
                             <h2>Nos horaires</h2>
                             <table class="table table-striped table-bordered table-hover">
                                 <thead class="table-dark">
@@ -203,15 +185,51 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="d-flex flex-column col-md-2">Pour réserver une table :
-                                <a href="tel:+33322242017" class="btn btn-outline-dark btn-lg" role="button">Appeler</a>
+                            <div class="d-flex flex-column col-md-5">Pour réserver une table :
+                                <a href="tel:+33322242017" class="btn btn-lg contact-btn" role="button">Appelez-nous</a>
                             </div>
                         </div>
-                        <div class="img-container">
-                            <img src="" alt="Le Cheval Noir" class="img-fluid">
+                        <div class="col-sm-12 col-md-6">
+                            <h2>Nos services</h2>
+                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fa-solid fa-wheelchair card-img-top"></i>
+                                    <h5 class="card-title">Accessible en fauteuil roulant</h5>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fa-solid fa-bowl-rice card-img-top"></i>
+                                    <h5 class="card-title">Plats à emporter du jeudi au dimanche</h5>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fa-solid fa-square-parking card-img-top"></i>
+                                    <h5 class="card-title">Grand parking gratuit</h5>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fa-solid fa-martini-glass card-img-top"></i>
+                                    <h5 class="card-title">Bar Cocktail maison Soho Curaçao Gin jus de fruit</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- Client Feedback -->
+             <!-- 
+            ------------------------------
+            Put in tripAdvisor 
+            reviews with widget
+            ------------------------------
+             -->
+            <!-- Opening hours -->
+            <section id="opening-hours">
+                
             </section>
             <!-- Contact  & Google maps -->
             <section id="contact" class="container">
@@ -219,7 +237,7 @@
                     <div class="col-md-5">
                         <h2>Contact</h2>
                         <p>Simplifiez votre réservation, contactez-nous via WhatsApp</p>
-                        <a href="https://wa.me/33322242017" class="btn btn-outline-dark btn-lg" role="button">Envoyer un
+                        <a href="https://wa.me/33322242017" class="btn btn-lg contact-btn" role="button">Envoyer un
                             message WhatsApp</a>
                     </div>
                     <div id="maps-container" class="col-sm-10 col-md-7 overflow-x-hidden">
@@ -230,6 +248,9 @@
                     </div>
                 </div>
             </section>
+            <a id="btn-top" href="#hero-section" class="btn btn-lg" role="button">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
     </main>
     <footer class="container-fluid">
         <div class="container">
@@ -237,7 +258,7 @@
         </div>
         <div class="container">Suivez-nous sur les reseaux</div>
         <div class="container">
-            <a href="https://www.facebook.com/pages/Le%2520Cheval%2520Noir/283384975447009/?checkpoint_src=any" class="btn btn-outline-dark btn-lg" role="button"><i
+            <a href="https://www.facebook.com/pages/Le%2520Cheval%2520Noir/283384975447009/?checkpoint_src=any" class="btn btn-lg" role="button"><i
                     class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
