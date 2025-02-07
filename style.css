@@ -25,13 +25,14 @@
     --marginTop-container: 5vh 0 0 0;
     --marginY: 10vh 0;
     --marginX: 0 5vw;
+    --padding: 10vh 5vw;
     --paddingTop-container: 5vh 0 0 0;
     --paddingY: 10vh 0;
     --paddingX: 0 5%;
     --borderRadius: 5px;
     --line-height-huge: 0.5;
     --line-height-title: 1.5;
-    --line-height-text: 3;
+    --line-height-text: 4;
     --font-size-huge: 48px;
     --font-size-title: 36px;
     --font-size-subtitle: 24px;
@@ -70,7 +71,7 @@ header a {
     text-transform: uppercase;
     font-weight: var(--font-weight-bold) !important;
     font-size: var(--font-size-btn);
-    max-height: 10vh;
+    max-height: fit-content;
     text-shadow: var(--box-shadow-small);
 }
 
@@ -95,10 +96,11 @@ h2 {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: var(--box-shadow-small);
+    margin-bottom: 1.5vh;
 }
 
 h3 {
-    font-size: var(--font-size-text);
+    font-size: var(--font-size-subtitle);
     line-height: var(--line-height-text);
 }
 
@@ -175,19 +177,77 @@ hr {
     line-height: var(--line-height-title);
 }
 
-.img-container img {
+.img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40vw;
-    max-height: 50vh;
+}
+
+.img-container img {
+    width: 44vw;
+    max-height: 70vh;
     object-fit: cover;
 }
 
-#menu {
+#menu-container {
+  background-color: var(--white);
+  color: var(--dark-green);
+  padding: var(--padding);
+}
+
+.menu-list {
+    padding: var(--paddingX);
+}
+
+.menu-item-title {
+    font-weight: 400;
+    font-size: var(--font-size-text);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.3;
+    z-index: 1;
+    height: 50px;
+    background-color: var(--white);
+}
+
+.menu-item-title span, .item-price span {
+    background-color: var(--white);
+    z-index: 1;
+    position: relative;
+}
+  
+  .menu-item-title::after {
+    display: block;
+    content: "";
+    min-width: 100%;
+    height: 2px;
+    margin-top: -24px;
+    border-top: 2px dotted var(--dark-green);
+    position: relative;
+    left: 0px;
+    margin-left: 0;
+    z-index: 0;
+  }
+
+  .item-price {
+    position: relative;
+    bottom: 42px;
+    justify-self: end !important;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    justify-content: flex-end;
+  }
+
+  .item-size {
+    width: 63px;
+  }
+
+.item-description {
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-text);
+    color: var(--dark-green);
+    letter-spacing: 1px;
+    line-height: 0;
+    margin-top: -50px !important;
 }
 
 #btn-top {
