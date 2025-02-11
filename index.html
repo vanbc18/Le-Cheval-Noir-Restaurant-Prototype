@@ -16,6 +16,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/dc5025cb56.js" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>Le Cheval Noir, restaurant de couscous à Miannay</title>
 </head>
 
@@ -70,29 +73,62 @@
         </section>
         <!-- About Section -->
         <section id="about">
-            <div class="container">
-                <h2>À propos de nous</h2>
-                <div class="row">
-                    <div class="img-container d-none d-md-block col-md-auto">
-                        <img src="images/couscous-ai.jpeg" alt="Couscous" class="img-fluid rounded">
-                    </div>
-                    <div class="col-sm-12 col-md-6 align-self-center">
-                        <p class="d-flex justify-self-center">
-                            Nous vous proposons une cuisine orientale maison à base de produits frais,
-                            une sélection de bons vins et un accueil chaleureux.
-                            Venez découvrir de délicieuses saveurs orientales !
-                        </p>
+            <div class="justify-content-center">
+                <h2 class="text-center py-0">À propos de nous</h2>
+                <div class="container col-sm-12 col-md-6 align-self-baseline">
+                    <p id="about-description" class="py-4">
+                        Nous vous proposons une cuisine orientale maison à base de produits frais,
+                        une sélection de bons vins et un accueil chaleureux.
+                        Venez découvrir de délicieuses saveurs orientales !
+                    </p>
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper" data-swiper-parallax="500">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper container-fluid">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="images/photo-couscous-cuit.jpg" alt="Restaurant" class="img-fluid rounded" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/le-cheval-noir-couscous-hors-assiette.jpg" alt="Couscous" class="img-fluid rounded" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/le-cheval-noir-assiette.jpg" alt="Restaurant" loading="lazy" class="img-fluid rounded">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/le-cheval-noir-semoule.jpg" alt="Semoule de blé dans des bols" loading="lazy" class="img-fluid rounded">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/le-cheval-noir-couscous.jpg" alt="Couscous" loading="lazy" class="img-fluid rounded">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/le-cheval-noir-bar.jpg" alt="Couscous" loading="lazy" class="img-fluid rounded">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/le-cheval-noir-bar-2.jpg" alt="Couscous" loading="lazy" class="img-fluid rounded">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/le-cheval-noir-bar-3.jpg" alt="Couscous" loading="lazy" class="img-fluid rounded">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/le-cheval-noir-salle.jpg" alt="Couscous" loading="lazy" class="img-fluid rounded">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/le-cheval-noir-fresque.jpg" alt="Couscous" loading="lazy" class="img-fluid rounded">
+                        </div>
                     </div>
                 </div>
+            </div>
             </div>
             </div>
         </section>
         <!-- Menu Section -->
         <section id="menu" class="container-fluid">
             <div class="container" id="menu-container">
-                <h2 class="text-center m-0">Menu & carte</h2>
-                <div class="row container d-flex justify-content-center">
-                    <h3 class="text-center">Nos Couscous</h3>
+                <h2 class="text-center">Menu & carte</h2>
+                <div class="row px-4 d-flex justify-content-center">
+                    <h3 class="menu-category">nos Couscous</h3>
                     <ul class="menu-list">
                         <li class="row">
                             <div class="container col-md-12">
@@ -131,7 +167,6 @@
                             </div>
                             <p class="item-description">poulet, merguez
                                 faites maison, côte d'agneau brochette d'agneau</p>
-
                         </li>
                         <li class="row">
                             <div class="container col-md-12">
@@ -143,109 +178,105 @@
                                 </span>
                             </div>
                             <p class="item-description">poulet, merguez faites maison, agneau</p>
-
                         </li>
                         <li class="row">
-                            <div class="container col-md-12">
+                            <div class="container col-sm-12">
                                 <span class="menu-item-title col-md-6">
                                     <span>Le Brochette</span>
                                 </span>
-                                <span class="item-price col-md-12">
+                                <span class="item-price col-sm-12">
                                     <span>15.90€</span>
                                 </span>
                             </div>
                             <p class="item-description">2 brochettes d'agneau</p>
                         </li>
                         <li class="row">
-                            <div class="container col-md-12">
+                            <div class="container col-sm-12">
                                 <span class="menu-item-title col-md-6">
                                     <span>Le Poulet Merguez</span>
                                 </span>
-                                <span class="item-price col-md-12">
+                                <span class="item-price col-sm-12">
                                     <span>14.90€</span>
                                 </span>
                             </div>
                             <p class="item-description">poulet, merguez faites maison</p>
                         </li>
                         <li class="row">
-                            <div class="container col-md-12">
+                            <div class="container col-sm-12">
                                 <span class="menu-item-title col-md-6">
                                     <span>Le Brochette Merguez</span>
                                 </span>
-                                <span class="item-price col-md-12">
+                                <span class="item-price col-sm-12">
                                     <span>14.90€</span>
                                 </span>
                             </div>
                             <p class="item-description">brochette d'agneau, 2 merguez faites maison</p>
                         </li>
                         <li class="row">
-                            <div class="container col-md-12">
+                            <div class="container col-sm-12">
                                 <span class="menu-item-title col-md-6">
                                     <span>Le Boulette</span>
                                 </span>
-                                <span class="item-price col-md-12">
+                                <span class="item-price col-sm-12">
                                     <span>14.90€</span>
                                 </span>
                             </div>
                             <p class="item-description">2 copieuses boulettes de boeuf</p>
                         </li>
                     </ul>
-                    <h3 class="text-center">Nos Vins</h3>
+                    <h3 class="menu-category">Nos Vins</h3>
                     <ul class="menu-list">
-                        <li class="row align-items-baseline">
-                            <div class="col-md-10">
+                        <li class="row align-items-baseline sizes-container">
+                            <div class=" text-end">
+                                <span class="item-size">37.5cl</span>
+                                <span class="item-size">75cl</span>
                             </div>
-                            <div class="col d-flex justify-content-end">
-                                <span class="item-size col-md-1 text-end">37.5cl</span>
-                            <span class="item-size col-md-1 text-end">75cl</span>
-                            </div>
-                            
                         </li>
                         <li class="row align-items-baseline">
-                            <div class="container col-md-12">
-                                <span class="menu-item-title col-md-6">
-                                    <span>“Guerrouane “Domaine Toulal”</span>
+                            <div class="container col-sm-12">
+                                <span class="menu-item-title col-sm-3 col-md-6">
+                                    <span class="btl-name"><span class="d-none d-md-inline-block">“</span>Guerrouane <span class="d-none d-md-inline-block">“Domaine Toulal”</span></span>
                                 </span>
-                                <span class="item-price col-md-12">
-                                        <span class="row">
-                                            <span class="btl-price col-md-6">10.90€</span>
-                                            <span class="btl-price col-md-4">19.90€</span>
-                                        </span>
+                                <span class="item-price col-sm-12">
+                                    <span class="row">
+                                        <span class="btl-price col col-md-6">10.90€</span>
+                                        <span class="btl-price col">19.90€</span>
                                     </span>
                                 </span>
+                                </span>
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-sm-9">
                                 <p class="item-description">Rouge ou gris</p>
                             </div>
                         </li>
                         <li class="row align-items-baseline">
-                            <div class="container col-md-12">
+                            <div class="container col-sm-12">
                                 <span class="menu-item-title col-md-6">
-                                    <span>“Côteaux du Mascara”</span>
+                                    <span class="btl-name"><span class="d-none d-md-inline-block">“Côteaux du </span>Mascara<span class="d-none d-md-inline-block">”</span></span>
                                 </span>
-                                <span class="item-price col-md-12">
-                                        <span class="row">
-                                            <span class="btl-price col-md-6">12.90€</span>
-                                            <span class="btl-price col-md-4">22.90€</span>
-                                        </span>
+                                <span class="item-price col-sm-12">
+                                    <span class="row">
+                                        <span class="btl-price col-md-6 col">12.90€</span>
+                                        <span class="btl-price col">22.90€</span>
                                     </span>
                                 </span>
+                                </span>
                             </div>
-                            <div>
+                            <div class="col-sm-9">
                                 <p class="item-description">Rouge ou rosé</p>
                             </div>
                         </li>
                         <li class="row align-items-baseline">
-                            <div class="container col-md-12">
+                            <div class="container col-sm-12">
                                 <span class="menu-item-title col-md-6">
-                                    <span>Cinsault “Cuvée de Tlemcen”</span>
+                                    <span class="btl-name"><span class="d-none d-md-inline-block">Cinsault “Cuvée de </span> Tlemcen<span class="d-none d-md-inline-block">”</span></span>
                                 </span>
-                                <span class="item-price col-md-12">
-                                        <span class="row">
-                                            <span class="btl-price col-md-6 d-none">xx.xx€</span>
-                                            <span class="btl-price col-md-4">22.90€</span>
-                                        </span>
+                                <span class="item-price col-sm-12">
+                                    <span class="row">
+                                        <span class="btl-price col d-none">xx.xx€</span>
+                                        <span class="btl-price col">22.90€</span>
                                     </span>
+                                </span>
                                 </span>
                             </div>
                             <div>
@@ -259,7 +290,7 @@
         <!-- Petits + -->
         <section id="services">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-around">
                     <div class="col-sm-12 col-md-5">
                         <h2>Nos horaires</h2>
                         <table class="table table-striped table-bordered table-hover">
@@ -315,25 +346,25 @@
                     <div class="col-sm-12 col-md-6">
                         <h2>Nos services</h2>
 
-                        <div class="card">
+                        <div class="card col-sm-12 col-md-5">
                             <div class="card-body">
                                 <i class="fa-solid fa-wheelchair card-img-top"></i>
                                 <h5 class="card-title">Accessible en fauteuil roulant</h5>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card col-sm-12 col-md-5">
                             <div class="card-body">
                                 <i class="fa-solid fa-bowl-rice card-img-top"></i>
                                 <h5 class="card-title">Plats à emporter du jeudi au dimanche</h5>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card col-sm-12 col-md-5">
                             <div class="card-body">
                                 <i class="fa-solid fa-square-parking card-img-top"></i>
                                 <h5 class="card-title">Grand parking gratuit</h5>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card col-sm-12 col-md-5">
                             <div class="card-body">
                                 <i class="fa-solid fa-martini-glass card-img-top"></i>
                                 <h5 class="card-title">Bar Cocktail maison Soho Curaçao Gin jus de fruit</h5>
