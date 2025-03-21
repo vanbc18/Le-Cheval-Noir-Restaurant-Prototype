@@ -293,9 +293,10 @@ li {
     font-size: var(--font-size-text);
     color: var(--dark-green);
     letter-spacing: 0;
-    line-height: 0;
+    line-height: 15px;
     position: relative;
-    bottom: 42px;
+    bottom: 55px;
+    z-index: 5;
     display: flex !important;
 }
 
