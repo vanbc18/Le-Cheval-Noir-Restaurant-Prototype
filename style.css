@@ -27,15 +27,17 @@
     --marginY-small: 5vh 0;
     --marginX: 0 5vw;
     --padding: 10vh 5vw;
+    --padding-card: 10px 30px;
     --paddingTop-container: 5vh 0 0 0;
     --paddingY: 10vh 0;
     --paddingX: 0 5%;
+    --padding-icon: 15px 0;
     --borderRadius: 5px;
     --line-height-huge: 0.5;
     --line-height-title: 1.5;
     --line-height-text: 4;
     --font-size-huge: 48px;
-    --font-size-title: 36px;
+    --font-size-title: 30px;
     --font-size-subtitle: 24px;
     --font-size-btn: 18px;
     --font-size-text: 16px;
@@ -49,6 +51,10 @@
     --box-shadow-xl: 0 20px 40px rgba(255, 255, 255, 0.2);
     --linear-gradient-green-header: to left, var(--dark-green), var(--green);
     --linear-gradient-green: to left, var(--dark-green), var(--dark-green2);
+}
+
+.padding-left {
+    padding-left: 65px;
 }
 
 nav {
@@ -132,7 +138,7 @@ hr {
     background-position: 50% 80%;
     background-color: var(--dark-grey);
     background-blend-mode: multiply;
-    height: 90vh;
+    height: 100vh;
     margin: 0;
 }
 
@@ -234,7 +240,8 @@ li {
     background-color: var(--white);
 }
 
-.menu-item-title span, .item-price span {
+.menu-item-title span, 
+.item-price span {
     background-color: var(--white);
     z-index: 1;
     position: relative;
@@ -290,10 +297,53 @@ li {
     position: relative;
     bottom: 42px;
     display: flex !important;
-    
 }
 
-@media screen and (max-width: 768px) {
+.card {
+    max-width: 180px;
+    height: 200px;
+    padding: 0;
+    box-shadow: var(--box-shadow-small);
+}
+
+.card:nth-child(odd) {
+    margin: 0 10px 10px 0;
+}
+
+.card-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-card);
+}
+
+.card-body > i {
+    padding: var(--padding-icon);
+}
+
+footer {
+    background-color: var(--black);
+    color: var(--light-green);
+    padding: var(--paddingX);
+    border-radius: 10px 10px 0 0;
+    margin-top: -10px;
+    padding: 20px 0 10px 0;
+}
+
+#btn-top {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    right: -1vw;
+    margin: 20px 30px 30px 0;
+    color: var(--light-green);
+    background-image: linear-gradient(var(--linear-gradient-green));
+    border: 2px solid var(--light-green);
+    border-radius: 1000px;
+}
+
+@media screen and (min-width: 768px) {
     .item-description {
         position: relative;
         flex-wrap: nowrap;
@@ -325,16 +375,84 @@ li {
         right: 0px !important;
         outline: solid;
       }
+
+      #hours-container {
+        padding-right: 20px;
+    }
+
+    #services-container {
+        padding-left: 0;
+    }
+
+    #contact {
+        padding: 102.4px 12px;
+    }
+
+    #contact .no-p-left {
+        padding-left: 0;
+    }
+
+      #contact h2 {
+        margin-top: 0;
+      }
+
+      #contact p {
+        margin-bottom: 100px;
+      }
+
 }
 
-#btn-top {
-    position: fixed;
-    z-index: 10;
-    bottom: 0;
-    right: -1vw;
-    margin: 20px;
-    color: var(--light-green);
-    background-image: linear-gradient(var(--linear-gradient-green));
-    border: 2px solid var(--light-green);
-    border-radius: 1000px;
+@media screen and (min-width: 992px) {
+    #hours-container {
+        padding-left: 90px;
+    }
+
+    #services-container {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #hours-container {
+        padding-left: 80px;
+    }
+    
+    #services-container {
+        padding-right: 50px;
+    }
+
+    #services-container .card {
+        min-width: 250px;
+    }
+
+    #contact .no-p-left {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #hours-container {
+        padding: 0 100px;
+    }
+
+    #services-container {
+        padding-right: 0px;
+    }
+
+    #services-container .card {
+        max-width: 290px;
+        height: 300px;
+    }
+
+    #services-container .card-body {
+        padding: 100px 50px !important;
+    }
+
+    #contact .no-p-left {
+        padding-left: 20px;
+    }
+
+    #maps-container {
+        padding-left: 160px !important;
+    }
 }
